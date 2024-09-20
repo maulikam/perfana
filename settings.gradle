@@ -1,0 +1,11 @@
+rootProject.name = 'perfbit'
+
+include 'api-gateway'
+include 'auth-service'
+include 'project-management-service'
+include 'code-analysis-service'
+include 'devops-metrics-service'
+include 'team-collaboration-service'
+include 'ai-insights-service'
+include 'reporting-service'
+include 'common'

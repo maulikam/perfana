@@ -1,0 +1,24 @@
+plugins {
+    id 'com.netflix.dgs.codegen'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter'
+    implementation project(':common')
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter-test'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:${netflixDgsVersion}"
+    }
+}
+
+generateJava {
+    schemaPaths = ["${projectDir}/src/main/resources/graphql"]
+    packageName = 'com.perfbit.app.api-gateway.codegen'
+    generateClient = true
+}

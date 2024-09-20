@@ -1,0 +1,20 @@
+# Gradle
+.gradle/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+/.gitignore
